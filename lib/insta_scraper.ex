@@ -1,0 +1,2 @@
+defmodule InstaScraper do
+end
