@@ -1,21 +1,21 @@
 defmodule InstaScraper.JSON do
-  def get_account(username) when is_binary(username) do
+  def get_account(username) do
     username
     |> account_url
     |> get
   end
 
-  def account_url(username) do
+  def account_url(username) when is_binary(username) do
     "https://www.instagram.com/#{username}/?__a=1"
   end
 
-  def get_media(media_code) when is_binary(media_code) do
+  def get_media(media_code) do
     media_code
     |> media_url
     |> get
   end
 
-  def media_url(media_code) do
+  def media_url(media_code) when is_binary(media_code) do
     "https://www.instagram.com/p/#{media_code}/?__a=1"
   end
 
