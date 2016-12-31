@@ -11,8 +11,6 @@ defmodule InstaScraper do
   """
   def serialize_params([]), do: ""
   def serialize_params(params) when is_list(params) do
-    "?" <> (params
-            |> Enum.map(fn {k, v} -> "#{k}=#{v}" end)
-            |> Enum.join("&"))
+    "?" <> URI.encode_query(params)
   end
 end
