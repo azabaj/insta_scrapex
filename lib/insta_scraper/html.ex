@@ -11,6 +11,16 @@ defmodule InstaScraper.HTML do
     "https://www.instagram.com/#{username}/"
   end
 
+  def get_media(media_code) do
+    media_code
+    |> media_url
+    |> get
+  end
+
+  def media_url(media_code) when is_binary(media_code) do
+    "https://www.instagram.com/p/#{media_code}/"
+  end
+
   defp get(url) do
     url
     |> HTTPoison.get
