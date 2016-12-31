@@ -1,6 +1,4 @@
 defmodule InstaScraper.HTML do
-  #import InstaScraper, only: [serialize_params: 1]
-
   def get_account(username) do
     username
     |> account_url
