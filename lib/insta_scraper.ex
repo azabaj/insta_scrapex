@@ -3,11 +3,11 @@ defmodule InstaScraper do
   Serializes params
 
   ## Examples
-      iex> InstaScraper.serialize_params(food: "15", bar: "large")
-      "?food=15&bar=large"
-
       iex> InstaScraper.serialize_params([])
       ""
+
+      iex> InstaScraper.serialize_params(food: "15", bar: "large")
+      "?food=15&bar=large"
   """
   def serialize_params([]), do: ""
   def serialize_params(params) when is_list(params) do
