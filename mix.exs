@@ -29,6 +29,9 @@ defmodule InstaScraper.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:httpoison, "0.10.0"}]
+    [
+      {:httpoison, "~> 0.10.0"},
+      {:poison, "~> 3.0"},
+    ]
   end
 end
