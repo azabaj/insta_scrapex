@@ -13,7 +13,9 @@ defmodule InstaScrapex.Mixfile do
       name: "InstaScrapex",
       description: "Scrapes Instagram JSON and HTML endpoints without and API key",
       package: [
+        maintainers: ["Barna Kovacs"],
         licenses: ["UNLICENSE"],
+        links: %{"GitHub" => "https://github.com/preciz/parse_torrent"},
       ],
       source_url: "https://github.com/preciz/insta_scrapex",
       homepage_url: "https://github.com/preciz/insta_scrapex",
