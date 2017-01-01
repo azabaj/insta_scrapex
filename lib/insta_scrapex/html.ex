@@ -3,6 +3,7 @@ defmodule InstaScrapex.HTML do
     This module's functions parse the embedded sharedData JSON object from
     HTML responses and return it as a map.
   """
+
   use HTTPoison.Base
 
   @doc """
