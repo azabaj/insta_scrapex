@@ -13,7 +13,5 @@ defmodule InstaScraper.JSONTest do
 
   test "it returns url for account_media" do
      assert "https://www.instagram.com/nasa/media/" == JSON.account_media_url("nasa")
-
-     assert "https://www.instagram.com/nasa/media/?max_id=12341234" == JSON.account_media_url("nasa", max_id: 12341234)
   end
 end
