@@ -21,13 +21,13 @@ defmodule InstaScraper.JSON do
     "https://www.instagram.com/p/#{media_code}/?__a=1"
   end
 
-  def get_account_media(username, params \\ []) when is_binary(username) do
+  def get_account_media(username, params \\ []) do
     username
     |> account_media_url(params)
     |> get
   end
 
-  def account_media_url(username, params \\ []) do
+  def account_media_url(username, params \\ []) when is_binary(username) do
    "https://www.instagram.com/#{username}/media/#{serialize_params(params)}"
   end
 
