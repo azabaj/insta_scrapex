@@ -28,22 +28,32 @@ Use at your own risk
 
 ### JSON endpoints
 
-  `InstaScrapex.JSON.get_account("nasa")`
-  `{:ok, %HTTPoison.Response{body: %{}, ...}}`
+  ```elixir
+  iex> InstaScrapex.JSON.get_account("nasa")
+  {:ok, %HTTPoison.Response{body: %{}, ...}}
+  ````
 
-  `InstaScrapex.JSON.get_media("BKgPf5ZgP97")`
-  `{:ok, %HTTPoison.Response{body: %{}, ...}}`
+  ```elixir
+  iex> InstaScrapex.JSON.get_media("BKgPf5ZgP97")
+  {:ok, %HTTPoison.Response{body: %{}, ...}}
+  ````
 
-  `InstaScrapex.JSON.get_account_media("nasa")`
-  `{:ok, %HTTPoison.Response{body: %{}, ...}}`
+  ```elixir
+  iex> InstaScrapex.JSON.get_account_media("nasa")
+  {:ok, %HTTPoison.Response{body: %{}, ...}}
+  ````
 
 ### HTML endpoints
 
-  `InstaScrapex.HTML.get_account("nasa")`
-  `{:ok, %HTTPoison.Response{body: %{}, ...}}`
+  ```elixir
+  iex> InstaScrapex.HTML.get_account("nasa")
+  {:ok, %HTTPoison.Response{body: %{}, ...}}
+  ````
 
-  `InstaScrapex.HTML.get_media("BKgPf5ZgP97")`
-  `{:ok, %HTTPoison.Response{body: %{}, ...}}`
+  ```elixir
+  iex> InstaScrapex.HTML.get_media("BKgPf5ZgP97")
+  {:ok, %HTTPoison.Response{body: %{}, ...}}
+  ````
 
 ## LICENSE
 	InstaScrapex is released into the public domain. See [UNLICENSE](http://unlicense.org/) for more information or the accompanying UNLICENSE file.
