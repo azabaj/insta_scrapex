@@ -1,4 +1,4 @@
-# InstaScraper
+# InstaScrapex
 
 **TODO: Add description**
 
@@ -6,19 +6,19 @@
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
 
-  1. Add `insta_scraper` to your list of dependencies in `mix.exs`:
+  1. Add `insta_scrapex` to your list of dependencies in `mix.exs`:
 
     ```elixir
     def deps do
-      [{:insta_scraper, "~> 0.1.0"}]
+      [{:insta_scrapex, "~> 0.1.0"}]
     end
     ```
 
-  2. Ensure `insta_scraper` is started before your application:
+  2. Ensure `insta_scrapex` is started before your application:
 
     ```elixir
     def application do
-      [applications: [:insta_scraper]]
+      [applications: [:insta_scrapex]]
     end
     ```
 

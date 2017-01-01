@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure for your application as:
 #
-#     config :insta_scraper, key: :value
+#     config :insta_scrapex, key: :value
 #
 # And access this configuration in your application as:
 #
-#     Application.get_env(:insta_scraper, :key)
+#     Application.get_env(:insta_scrapex, :key)
 #
 # Or configure a 3rd-party app:
 #

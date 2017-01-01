@@ -1,7 +1,7 @@
-defmodule InstaScraper.JSONTest do
+defmodule InstaScrapex.JSONTest do
   use ExUnit.Case
 
-  alias InstaScraper.JSON
+  alias InstaScrapex.JSON
 
   test "it returns url for username" do
     assert "https://www.instagram.com/nasa/?__a=1" == JSON.account_url("nasa")

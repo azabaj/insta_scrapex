@@ -1,4 +1,4 @@
-defmodule InstaScraperTest do
+defmodule InstaScrapexTest do
   use ExUnit.Case
-  doctest InstaScraper
+  doctest InstaScrapex
 end
