@@ -40,7 +40,7 @@ defmodule InstaScrapex.Mixfile do
       {:ex_doc, "~> 0.14", only: :dev},
 
       {:httpoison, "~> 0.10.0"},
-      {:poison, "~> 3.0"},
+      {:poison, "~> 2.0"},
     ]
   end
 end
