@@ -14,4 +14,17 @@ defmodule InstaScrapex.JSONTest do
   test "it returns url for account_media" do
      assert "https://www.instagram.com/nasa/media/" == JSON.account_media_url("nasa")
   end
+
+  test "it decodes json" do
+    body = File.read!("./test/insta_scraper/test_responses/account.json")
+
+    assert JSON.process_response_body(body)
+  end
+
+  test "it raises if json decode fails" do
+    body = "{]"
+
+    assert_raise Poison.SyntaxError, fn -> JSON.process_response_body(body)
+    end
+  end
 end

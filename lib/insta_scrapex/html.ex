@@ -9,19 +9,19 @@ defmodule InstaScrapex.HTML do
   @doc """
     Use this to get info about accounts
 
-    Wraps HTTPoison.get, but takes a username instead of url,
+    Wraps HTTPoison.get!, but takes a username instead of url,
     and returns a Map in the response[:body]
 
     ## Examples
 
-        iex> get_account("nasa")
-        {:ok, %HTTPoison.Response{body: %{}, ...}
+        iex> InstaScrapes.HTML.get_account!("nasa")
+        %HTTPoison.Response{body: %{}, ...}
 
   """
-  def get_account(username, headers \\ [], options \\ []) do
+  def get_account!(username, headers \\ [], options \\ []) do
     username
     |> account_url
-    |> get(headers, options)
+    |> get!(headers, options)
   end
 
   @doc false
@@ -37,14 +37,14 @@ defmodule InstaScrapex.HTML do
 
     ## Examples
 
-        iex> get_media("BKgPf5ZgP97")
-        {:ok, %HTTPoison.Response{body: %{}, ...}
+        iex> InstaScrapex.HTML.get_media!("BKgPf5ZgP97")
+        %HTTPoison.Response{body: %{}, ...}
 
   """
-  def get_media(media_code, headers \\ [], options \\ []) do
+  def get_media!(media_code, headers \\ [], options \\ []) do
     media_code
     |> media_url
-    |> get(headers, options)
+    |> get!(headers, options)
   end
 
   @doc false
@@ -55,6 +55,7 @@ defmodule InstaScrapex.HTML do
   @doc false
   def process_response_body(body) do
     Regex.named_captures(~r/_sharedData = (?<json>{.+});</, body)["json"]
+    |> to_string # make sure return value is a string in case of nil
     |> Poison.decode!
   end
 end

@@ -10,7 +10,7 @@ Use at your own risk
 
     ```elixir
     def deps do
-      [{:insta_scrapex, "~> 0.2.0"}]
+      [{:insta_scrapex, "~> 0.3.0"}]
     end
     ```
 
@@ -24,35 +24,35 @@ Use at your own risk
 
 ## Usage
   All functions return a map in the `response[:body]`
-  Functions wrap [HTTPoison.get/1](https://hexdocs.pm/httpoison/HTTPoison.html#get/3) so you can pass headers and other options to them
+  Functions wrap [HTTPoison.get!/3](https://hexdocs.pm/httpoison/HTTPoison.html#get/3) so you can pass headers and other options to them
 
 ### JSON endpoints
 
   ```elixir
-  iex> InstaScrapex.JSON.get_account("nasa")
-  {:ok, %HTTPoison.Response{body: %{}, ...}}
+  iex> InstaScrapex.JSON.get_account!("nasa")
+  %HTTPoison.Response{body: %{}, ...}
   ````
 
   ```elixir
-  iex> InstaScrapex.JSON.get_media("BKgPf5ZgP97")
-  {:ok, %HTTPoison.Response{body: %{}, ...}}
+  iex> InstaScrapex.JSON.get_media!("BKgPf5ZgP97")
+  %HTTPoison.Response{body: %{}, ...}
   ````
 
   ```elixir
-  iex> InstaScrapex.JSON.get_account_media("nasa")
-  {:ok, %HTTPoison.Response{body: %{}, ...}}
+  iex> InstaScrapex.JSON.get_account_media!("nasa")
+  %HTTPoison.Response{body: %{}, ...}
   ````
 
 ### HTML endpoints
 
   ```elixir
-  iex> InstaScrapex.HTML.get_account("nasa")
-  {:ok, %HTTPoison.Response{body: %{}, ...}}
+  iex> InstaScrapex.HTML.get_account!("nasa")
+  %HTTPoison.Response{body: %{}, ...}
   ````
 
   ```elixir
-  iex> InstaScrapex.HTML.get_media("BKgPf5ZgP97")
-  {:ok, %HTTPoison.Response{body: %{}, ...}}
+  iex> InstaScrapex.HTML.get_media!("BKgPf5ZgP97")
+  %HTTPoison.Response{body: %{}, ...}
   ````
 
 ## LICENSE
