@@ -15,7 +15,7 @@ defmodule InstaScrapex.Mixfile do
       package: [
         maintainers: ["Barna Kovacs"],
         licenses: ["UNLICENSE"],
-        links: %{"GitHub" => "https://github.com/preciz/parse_torrent"},
+        links: %{"GitHub" => "https://github.com/preciz/insta_scrapex"},
       ],
       source_url: "https://github.com/preciz/insta_scrapex",
       homepage_url: "https://github.com/preciz/insta_scrapex",
