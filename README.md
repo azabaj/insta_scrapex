@@ -10,7 +10,7 @@ Use at your own risk
 
     ```elixir
     def deps do
-      [{:insta_scrapex, "~> 0.1.0"}]
+      [{:insta_scrapex, "~> 0.2.0"}]
     end
     ```
 
