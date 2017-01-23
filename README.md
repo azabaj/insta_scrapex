@@ -41,6 +41,17 @@ Use at your own risk
   ```elixir
   iex> InstaScrapex.JSON.get_account_media!("nasa")
   %HTTPoison.Response{body: %{}, ...}
+  # paginate:
+  iex> InstaScrapex.JSON.get_account_media!("nasa", [], [params: [max_id: 12341234]])
+  %HTTPoison.Response{body: %{}, ...}
+  ````
+
+  ```elixir
+  iex> InstaScrapex.JSON.get_media_comments!(%{code: "BKgPf5ZgP97"})
+  %HTTPoison.Response{body: %{}, ...}
+  # paginate:
+  iex> InstaScrapex.JSON.get_media_comments!(%{"BKgPf5ZgP97", last_comment_id: 12341234})
+  %HTTPoison.Response{body: %{}, ...}
   ````
 
 ### HTML endpoints
