@@ -66,5 +66,8 @@ Use at your own risk
   %HTTPoison.Response{body: %{}, ...}
   ````
 
-## LICENSE
+## License
 	InstaScrapex is released into the public domain. See [UNLICENSE](http://unlicense.org/) for more information or the accompanying UNLICENSE file.
+
+## Support
+  The development of this software is supported by [VeryCreatives](http://verycreatives.com) LLC.
